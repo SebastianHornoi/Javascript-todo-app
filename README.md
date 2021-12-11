@@ -1,5 +1,5 @@
 # brunello
-todo app
+todo app: https://sebastianhornoi.github.io/brunello/
 ### Obiettivo proggetto: 
 Realizzare una todo app con lo stile di Trello, che permette all'utente di creare varie bacheche dove per ogni bacheca puo creare varie tasklist
 e dentro ogni tasklist puo creare i singoli todo.
