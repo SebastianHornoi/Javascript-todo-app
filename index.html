@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Brunello</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<!-- loader -->
+  <div class="login__loader__container">
+    <div class="login__loader__logo__container">
+      <img class="login__loader__logo" src="img/logo.svg" alt="">
+      <h3 class="login__loader__logo__text">Bru<b style="color:#03A9CD">Nello</b></h3>
+    </div>
+    <span class="login__loader__progressBar"></span>
+  </div>
+
+<!-- login page -->
+ <div class="page__container">
+   <div class="page__description">
+    <div class="description__logo">
+      <img class="logo" src="img/logo.svg" alt="" >
+      <img class="logobianco" src="img/logobianco.png" alt="">
+      <a href="index.html">
+      <h3>Bru<b style="color:#03A9CD">Nello</b></h3></a>
+    </div>
+    <div class="description__text">
+      <h1>ORGANIZZA IL TUO TEMPO!</h1>
+      <p>Crea le tue fantasctiche <b style="color:#03A9CD">to-do</b> list e tieni a mente i tuoi impegni</p>
+      <button class="login__button" type="button" name="button">login</button>
+    </div>
+    <div class=""></div>
+   </div>
+   <div class="page__login">
+     <!-- ! form per il login -->
+      <form class="form" action="index.html" method="post">
+        <div class="inputs">
+          <input class="emailInput" type="email" name=""  value="" placeholder="Email">
+          <div class="passwordDiv">
+              <input class="passwordInput" type="password" name="" value="" placeholder="Password">
+              <img  class="showPassword" src="img/eye.png" alt="">
+          </div>
+          <button class="submitInput" name="button">Login</button>
+        </div>
+        <p class="login__error"></p>
+        <p class="registratiText">Non hai un account? <span><b class="registrati">REGISTRATI</b></span></p>
+      </form>
+
+
+      <!-- ! form per la registrazione -->
+      <form class="registrati__form"  method="post">
+        <div class="registrati__title__container">
+          <img class="close__Registrati__form" src="img/x.png" alt="">
+          <h2>Registrati</h2>
+        </div>
+        <div class="registrati__inputs">
+          <input class="registrati__usernameInput" type="text" name=""  value="" placeholder="Username">
+          <input class="registrati__emailInput" type="email" placeholder="Email" name="" value="">
+          <div class="registrati__passwordDiv">
+              <input class="registrati__passwordInput" type="password" name="" value="" placeholder="Password">
+              <img  class="registrati__showPassword" src="img/eye.png" alt="">
+          </div>
+          <button class="registrati__submitInput" name="button">Registrati</button>
+          <p class="registrati__errore"><span style="color: black;" class="registrati__utenteCreatoText"></span></p>
+        </div>
+      </form>
+   </div>
+ </div>
+
+ <!-- homepage -->
+<div class="home-container homeClosed">
+  <div class="home__header">
+     <div class="home__header__icon">
+       <img class="home__foto__profilo" src="img/user.jpg" alt="">
+       <h4 class="home__saluto__utente"></h4>
+     </div>
+     <a href="index.html">
+    <img class="logout__icon" src="img/logout.svg" alt=""></a>
+  </div>
+  <div class="home__content">
+   <div class="home__content__creaBacheca__container">
+     <form class="form__crea__bachecha" action="index.html" method="post">
+       <input class="form__crea__bachecha__titolo" type="text" name="" value="" placeholder="Inserisci il titolo della tua bachecha">
+       <button class="form__crea__bachecha__button" name="button">Crea la tua bachecha</button>
+     </form>
+     <h2 class="bachecheTitolo">Le tue bacheche</h2>
+     <img class="home__plus__icon" src="img/plus.svg" alt="">
+   </div>
+   <div class="home__content__bachechaList__container">
+
+    <!-- <div class="statico__home__content__bacheca__card">
+      <img class="statico__home__content__bacheca__card__img" src="img/cardback.png" alt="">
+      <h3 class="statico__home__content__bacheca__card__title">Task da fare</h3>
+    </div> -->
+
+   </div>
+  </div>
+</div>
+
+ <!-- singol  bacheca -->
+<div class="singol__bacheca__container">
+  <div class="singol__bacheca__menu">
+    <div class="singol__bacheca__menu__icon">
+      <img class="singol__bacheca__foto__profilo" src="img/user.jpg" alt="">
+      <h4 class="singol__bacheca__saluto__utente">Ciao Sebastian</h4>
+    </div>
+    <a href="index.html">
+   <img class="logout__icon" src="img/home.png" alt=""></a>
+  </div>
+  <div class="singol__bacheca__content">
+    <img class="singol__bacheca__content__background" src="https://source.unsplash.com/random/?buildings" alt="">
+    <div class="singol__bacheca__content__title">
+      <h3 class="titolo__bacheca">Titolo Bacheca</h3>
+      <form class="tasklist__form" action="index.html" method="post">
+        <input type="text" class="tasklist__textInput" name="" value="" placeholder="+ aggiungi una lista">
+     </form>
+    </div>
+    <div class="singol__bacheca__content__content">
+
+
+
+
+    </div>
+  </div>
+</div>
+
+<script src="app.js" type="module"></script>
+</body>
+</html>

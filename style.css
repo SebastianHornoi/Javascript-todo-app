@@ -1,0 +1,199 @@
+body{margin: 0;padding: 0;font-family: "inter", sans-serif;overflow: hidden;}
+*{box-sizing: border-box;}
+
+/* ! typography*/
+h1{font-size: 60px}
+h2{font-size: 40px}
+h3{font-size: 30px}
+h4{font-size: 20px}
+p{font-size: 17px;}
+
+@media (max-width: 768px) {
+  h1{font-size: 30px;}
+  h2{font-size: 25px}
+  h3{font-size: 20px}
+  h4{font-size: 16px}
+}
+
+/* ! base*/
+a{color: #000;text-decoration: none;}
+
+/* ! login loader  */
+.login__loader__container{width: 100%;height: 100vh;background: #fff;display: flex;flex-direction: column;justify-content: center;align-items: center;display: none}
+.login__loader__container__active{display: flex!important}
+.login__loader__logo__container{display: flex}
+.login__loader__logo__text{font-size: 50px;margin-left: 20px;}
+.login__loader__logo{width: 70px;}
+.login__loader__progressBar{height: 4px;width: 20%;background: #000;animation-name: appear;animation-duration: 2.5s;animation-iteration-count: infinite;}
+@keyframes appear {
+  0%{width: 0;opacity: 1}
+  60%{opacity: 1}
+  90%{background: #03A9CD}
+  100%{width: 40%;opacity: 0}
+}
+
+
+/* ! login page*/
+.page__container{width: 100%;height: 100vh;display: flex}
+.page__description{height: 100%;width: 50%;display: flex;justify-content: space-between;;padding: 30px;flex-direction: column;}
+.description__logo{display: flex;}
+.logo{padding-right: 10px;}
+.logobianco{display: none}
+.login__button{display: none}
+
+.page__login{height: 100%;width: 50%;background-image: url("img/sfondologin.png");overflow: hidden;object-fit: cover;display: flex;justify-content: center;align-items: center;position: relative;}
+
+/* ! form per il login*/
+.form{height: 90%;width: 70%;position: relative;z-index: 1;border-radius: 30px;display: flex;justify-content: space-between;;align-items: center;flex-direction: column;padding: 30px;}
+.form::after{content: " ";
+width: 100%;height: 100%;position: absolute;top: 0;left: 0;z-index: 3;background: #fff;opacity: 0.8;border-radius: 30px}
+
+.inputs{display: flex;flex-direction: column;justify-content: center;align-items: center;width: 100%;height: 80%;}
+.emailInput{position: relative;z-index: 5;width: 60%;margin: 30px;height: 40px;border: none;padding: 10px;background: none;border-bottom: 2px solid #000;text-align: center;}
+.passwordInput{position: relative;z-index: 5;width: 60%;height: 40px;border: none;padding: 10px;background: none;border-bottom: 2px solid #000;text-align: center;}
+.passwordDiv{position: relative;width: 100%;display: flex;justify-content: center;align-items: center;}
+.showPassword{position: absolute;right: 100px;top: 5px;z-index: 5;width: 20px;}
+.registratiText{position: relative;z-index: 5}
+.submitInput{position: relative;border-radius: 9px;z-index: 5;padding: 10px 80px;margin-top: 50px;box-shadow: 5px 5px 15px 5px rgba(0,0,0,0.42);background: #03A9CD;color: #fff;border: none;transition: all 1s cubic-bezier(.215, .61, .355, 1);}
+.submitInput:hover{transform: scale(1.1);font-weight: bold;}
+input:focus{outline: none}
+.registrati{font-size: 20px;cursor: pointer;}
+.login__error{position: relative;z-index: 6;color: red;font-weight: bold;}
+
+/* ! form per il registrati*/
+.registrati__form{position: absolute;width: 70%;height: 90%;border-radius: 30px;background: #fff;z-index: 6;display: flex;justify-content: space-between;;align-items: center;flex-direction: column;transform: translateX(-150%);transition: all 1s cubic-bezier(.215, .61, .355, 1);}
+.registrati__inputs{display: flex;flex-direction: column;justify-content: center;align-items: center;width: 100%;height: 80%;}
+.registrati__title__container{position: relative;width: 100%;text-align: center;}
+.close__Registrati__form{position: absolute;top:10px;right: 20px}
+.registrati__usernameInput{position: relative;z-index: 6;width: 60%;margin: 30px;height: 40px;border: none;padding: 10px;background: none;border-bottom: 2px solid #000;text-align: center;}
+.registrati__emailInput{position: relative;z-index: 6;width: 60%;margin: 30px;height: 40px;border: none;padding: 10px;background: none;border-bottom: 2px solid #000;text-align: center;}
+.registrati__passwordInput{position: relative;z-index: 6;width: 60%;height: 40px;border: none;padding: 10px;background: none;border-bottom: 2px solid #000;text-align: center;}
+.registrati__passwordDiv{position: relative;width: 100%;display: flex;justify-content: center;align-items: center;margin: 50px;}
+.registrati__showPassword{position: absolute;right: 100px;top: 5px;z-index: 6;width: 20px;}
+.registrati__registratiText{position: relative;z-index: 6}
+.registrati__submitInput{position: relative;border-radius: 9px;z-index: 6;font-size: 20px;font-weight: bold;padding: 10px 80px;margin-top: 50px;box-shadow: 5px 5px 15px 5px rgba(0,0,0,0.42);background: #03A9CD;color: #fff;border: none;transition: all 1s cubic-bezier(.215, .61, .355, 1);}
+.registrati__submitInput:hover{transform: scale(1.1);font-weight: bold;}
+.registrati__file{padding: 20px}
+input:focus{outline: none}
+input[type="file"] {
+    display: none
+}
+.file__label{padding: 40px 70px;background: #000;color: #fff;box-shadow: 5px 5px 15px 5px rgba(0,0,0,0.42)}
+.registrati__form__active{transform: translateX(0);}
+.registrati__errore{font-size: 16px;color: red;text-align: center;}
+
+
+@media (max-width: 768px) {
+  .page__container{flex-direction: column;}
+  .page__description{width: 100%;height: 100%;background-image: url("img/sfondologin.png");position: relative;z-index: 1;transition: all 1s cubic-bezier(.215, .61, .355, 1);}
+  .page__description::after{
+    content: " ";
+    width: 100%;height: 100%;position: absolute;top: 0;left: 0;z-index: 3;background: #000;opacity: 0.6
+  }
+  .page__description h1, p, h3{color: #fff;position: relative;z-index: 5}
+  .logo{display: none;}
+  .logobianco{display: block;width: 50px;height: auto;position: relative;z-index: 5;object-fit: contain;padding-right: 20px;}
+  .login__button{display: block;padding: 15px 50px;color: #fff;border-radius: 9px;border: none;box-shadow: 5px 5px 15px 5px rgba(0,0,0,0.42);background: #03A9CD;position: relative;z-index: 5}
+
+  .page__login{width: 0;height: 100%;transform: translateX(-100%);display: none;transition: all 1s cubic-bezier(.215, .61, .355, 1);}
+  .description__active{width: 0;height: 0;display: none}
+  .login__active{display: flex;transform: translateX(0);width: 100%;}
+  .form{width: 90%;}
+  .registratiText{text-align: center;color: #000!important;}
+  .showPassword{right: 75px}
+
+  /*REIGSTRATI FORM*/
+  .registrati__form{width: 90%;}
+  .file__label{padding: 45px 50px}
+}
+
+
+/*------------------------------------*/
+   /* ! homepage */
+/*------------------------------------*/
+.homeClosed{display: none!important}
+
+.home-container{position: absolute;top: 0;left: 0;z-index: 11;width: 100%;height: 100vh;background: #fff;display: flex;flex-direction: column;overflow: hidden;}
+/* ! home menu*/
+.home__header{width: 100%;height: 13%;background: #03A9CD;color: #fff;z-index: 12;display: flex;justify-content: space-between;padding: 0px 40px;align-items: center;}
+.home__header__icon{display: flex;justify-content: center;align-items: center;}
+.home__header__icon img{width: 45px;height: 45px;box-shadow: 5px 5px 15px 5px rgba(0,0,0,0.42);}
+.home__header__icon h4{margin-left: 20px;}
+.logout__icon{width: 40px;}
+
+/* ! home content*/
+.home__content{width: 100%;height: 97%;z-index: 12;display: flex;flex-direction: column;}
+.home__content__creaBacheca__container{width: 95%;height: 10%;margin: auto;display: flex;justify-content: space-between;align-items: center;position: relative;overflow: hidden;}
+.form__crea__bachecha{position: absolute;top: 0;left: 0;width: 40%;height: 100%;display: flex;align-items: center;transform: translateX(-100%);transition: all 0.5s cubic-bezier(.215, .61, .355, 1);}
+.form__crea__bachecha__titolo{width: 60%;height: 80%;background: #fff;border: none;border-bottom: 1px solid #000;padding: 10px}
+.form__crea__bachecha__button{margin: 10px;padding: 10px 30px;background: #03A9CD;color: #fff;border: none}
+.form__crea__bachecha__active{transform: translateX(0);}
+.home__plus__icon{transition: all 0.5s cubic-bezier(.215, .61, .355, 1);}
+.home__plus__rotate{transform: rotate(45deg);}
+.dissapear{transform: translateX(-100%);}
+
+.home__content__bachechaList__container{width: 95%;height: 85%;margin: auto;display: flex;flex-wrap: wrap;}
+.home__content__bacheca__card{position: relative;width: 300px;height: 200px;display: flex;justify-content: center;align-items: center;box-shadow: 5px 5px 15px 5px rgba(0,0,0,0.42);margin: 10px;cursor: pointer;}
+.home__content__bacheca__card::after{
+  content: ' ';
+  position: absolute;top: 0;left: 0;background: #000;opacity: 0.7;width: 100%;height: 100%;
+}
+.home__content__bacheca__card__delete__bacheca{position: absolute;top: 20px;right: 20px;z-index: 30;width: 20px;height: auto;}
+.home__content__bacheca__card__img{position: absolute;top: 0;left: 0;width: 100%;height: 100%;object-fit: cover;}
+.home__content__bacheca__card__title{position: relative;z-index: 12;color: #fff;font-weight: bold;}
+
+@media (max-width: 768px) {
+  body{overflow: hidden;}
+  .form__crea__bachecha{width: 90%;}
+  .home__content__bachechaList__container{justify-content: center;align-items: center;overflow: scroll;padding: 30px 0px;margin-bottom: 30px; }
+  .home__content__bachechaList__container::-webkit-scrollbar{display: none}
+  .login__loader__logo__text{color: #000!important;}
+}
+
+.cardActive{width: 100%;height: 100vh;position: absolute;z-index: 13;top: 0;left: 0;margin: 0;padding: 0;}
+
+
+/* ----------------------------------*/
+   /* ! singol bacheca page */
+/*-----------------------------------------*/
+.singol__bacheca__container__active{display: flex!important;}
+.singol__bacheca__container{width: 100%;height: 100vh;position: absolute;top: 0;left: 0;z-index: 20;display: flex;flex-direction: column;display: none;overflow: hidden!important;}
+.singol__bacheca__menu{width: 100%;height: 13%;background: #03A9CD;color: #fff;z-index: 21;display: flex;justify-content: space-between;padding: 0px 40px;align-items: center;overflow: hidden;}
+.singol__bacheca__menu__icon{display: flex;justify-content: center;align-items: center;}
+.singol__bacheca__menu__icon img{width: 45px;height: 45px;box-shadow: 5px 5px 15px 5px rgba(0,0,0,0.42);}
+.singol__bacheca__menu__icon h4{margin-left: 20px;}
+
+
+.singol__bacheca__content{width: 100%;height: 97%;z-index: 21;display: flex;flex-direction: column;background: #fff;position: relative;overflow-y: hidden;;}
+.singol__bacheca__content::after{
+  content: " ";
+  width: 100%;height: 100%;position: absolute;z-index: 22;background: #000;opacity: 0.7;top: 0;left: 0;overflow-y: scroll
+}
+.singol__bacheca__content__background{position: absolute;top: 0;left: 0;width: 100%;height:100%;object-fit: cover;}
+.singol__bacheca__content__title{width: 100%;height: 20%;align-items: center;display: flex;padding-left: 30px;position: relative;z-index: 25}
+.singol__bacheca__content__title h3{color: #fff;margin-right: 20px;}
+.singol__bacheca__content__content{width: 100%;height: 80%;padding: 10px;display: flex;flex-wrap: wrap;position: relative;z-index: 25;overflow-y: scroll;}
+.tasklist__form{width: 300px;height: 40px;text-align: center;}
+.tasklist__textInput{width: 100%;height: 100%;border: none;background: #545456;opacity: 0.8;color: #fff;font-weight: bold;position: relative;z-index: 25;border-radius: 9px!important}
+.tasklist__textInput::placeholder {color: #fff;}
+input{padding: 20px;}
+
+.tasklist__box{width: 300px;height: fit-content;padding: 20px 0px;background: #EBECF0;margin: 20px 20px;border-radius: 9px;display: flex;flex-direction: column;}
+.tasklist__box__title{width: 100%;display: flex;justify-content: space-between;align-items: center;padding: 0px 10px;text-align: center;margin: 0;}
+.tasklist__box__title h4, .tasklist__box__title h3{margin: 5px;}
+.tasklist__box__content{width: 100%;display: flex;flex-direction: column;justify-content: center;align-items: center;}
+
+.crea__todo__form{height: 40px;width: 100%;margin-bottom: 20px;}
+.crea__todo__textInput{border: none;background: none;width: 100%;}
+
+.boxTodoSeparator{display: flex;flex-direction: column;justify-content: center;align-items: center;}
+.todo__box{width: 280px;height: fit-content;padding: 10px 10px;margin: 10px 0px;border-radius: 9px;display: flex;justify-content: space-between;align-items: center;box-shadow: 5px 5px 15px 5px rgba(0,0,0,0.27);}
+.todo__box img{width: 20px;height: 20px;}
+.todo__box p{margin: 0;}
+
+@media (max-width: 768px) {
+  .todo__box p{color: #000;}
+  .singol__bacheca__content__title{padding-left: 5px;flex-direction: column;}
+  .singol__bacheca__content__content{justify-content: center;align-items: center;}
+
+}
